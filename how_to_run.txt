@@ -1,0 +1,39 @@
+# MEDIARY - HOW TO RUN THE PROJECT 
+
+## 1. Prerequisites
+- **Node.js** (v18 or higher recommended)
+- **PostgreSQL** (v14 or higher recommended)
+
+## 2. Getting Started
+1. **Extract the project files** into a folder.
+2. Open your terminal in that folder.
+
+## 3. Database Setup
+1. Open your PostgreSQL terminal (psql) or any DB manager (like pgAdmin).
+2. **First, create a new database** named `mediary_db`:
+   ```sql
+   CREATE DATABASE mediary_db;
+   ```
+3. **After creating the database**, restore the provided backup file (`mediary_backup`) into `mediary_db`.
+     1. Right-click on your newly created `mediary_db`.
+     2. Select **Restore...**
+     3. In the "Filename" field, select the `mediary_backup` file.
+     4. Click **Restore**.
+
+## 4. Application Setup
+1. In your terminal (in the project folder), install dependencies:
+   ```bash
+   npm install
+   ```
+2. Check the `config.env` file. It is pre-configured for local development:
+   - `DB_USER`: Set to 'postgres'.
+   - `DB_PASSWORD`: Set to '1234' (Update this if your PostgreSQL password is different).
+   - `DB_NAME`: Set to 'mediary_db'.
+
+## 5. Running the App
+1. Start the server:
+   ```bash
+   node app.js
+   ```
+2. Open your web browser and go to: `http://localhost:3000`
+
